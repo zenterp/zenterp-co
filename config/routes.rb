@@ -1,7 +1,9 @@
 Zenterp::Application.routes.draw do
   root to: "application#index"
+  get "/contact" => "application#contact"
 
   resources :research, only: :index
+
 
 
   # The priority is based upon order of creation:
