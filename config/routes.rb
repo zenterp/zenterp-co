@@ -3,6 +3,7 @@ Zenterp::Application.routes.draw do
 
   root to: "application#index"
   get "/contact" => "application#contact"
+  get "/team" => "team#index"
 
   resources :research, only: :index
 
