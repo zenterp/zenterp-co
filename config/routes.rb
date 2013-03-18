@@ -1,8 +1,12 @@
 Zenterp::Application.routes.draw do
+  devise_for :admins
+
   root to: "application#index"
   get "/contact" => "application#contact"
 
   resources :research, only: :index
+
+  mount RailsAdmin::Engine => '/console', :as => 'admin'
 
 
 

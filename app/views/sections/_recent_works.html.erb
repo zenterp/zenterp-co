@@ -1,121 +1,25 @@
 <div class="row">
 	<div class="span12">
-		<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapdown m-icon-white"></i></span>&nbsp;&nbsp;Recent works</h3>
+		<h3 class="heading-success"><span class="btn btn-large btn-success"><i class="m-icon-big-swapdown m-icon-white"></i></span>&nbsp;&nbsp;Recent publications</h3>
 		<div id="latest-work" class="carousel btleft">
 			<div class="carousel-wrapper">
 				<ul class="portfolio-home da-thumbs">
+					<% @youtube_videos.each do |video| %>
 					<li>
 					<div class="thumbnail">
 						<div class="image-wrapp">
-							<img src="assets/img/dummies/work1.jpg" alt="Portfolio name" title="" />
+							<img src="<%= video.image_path %>" alt="Portfolio name" title="" />
 							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
+							<!--<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>-->
+							<span><a class="zoom" data-pretty="prettyPhoto" href="<%= video.url %>"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
 							</article>
 						</div>
 						<div class="caption">
-							<h5>Portfolio name</h5>
+							<h5><%= video.title %></h5>
 						</div>
 					</div>
 					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work2.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work3.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work4.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work5.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work6.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work7.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
-					<li>
-					<div class="thumbnail">
-						<div class="image-wrapp">
-							<img src="assets/img/dummies/work8.jpg" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt="Portfolio name" title="Portfolio name" /></a></span>
-							</article>
-						</div>
-						<div class="caption">
-							<h5>Portfolio name</h5>
-						</div>
-					</div>
-					</li>
+					<% end %>		
 				</ul>
 			</div>
 		</div>
