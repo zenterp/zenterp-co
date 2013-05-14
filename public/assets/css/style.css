@@ -5,6 +5,19 @@
 @import url('boxtile.css');
 /* ====================================== */
 
+.notice {
+	margin-top: -20px;
+	height:40px;
+	color:green;
+	text-align:center;
+	padding:1em;
+	background-color: #eee;
+}
+
+.notice p {
+	color :green;
+}
+
 body {
 overflow-x: hidden;
 }
@@ -1745,12 +1758,4 @@ ul.portfolio-area li {
 		text-align:center;
 	}
 
-}
-.notice {
-	margin-top: -20px;
-	height:40px;
-	color:green;
-	text-align:center;
-	padding:1em;
-	background-color: #eee;
 }
