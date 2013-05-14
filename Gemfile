@@ -8,7 +8,7 @@ gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-coinbase'
-gem 'omniauth-google_oauth2'
+gem "omniauth-google-oauth2"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
