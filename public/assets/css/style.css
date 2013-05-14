@@ -1746,3 +1746,10 @@ ul.portfolio-area li {
 	}
 
 }
+.notice {
+	margin-top: -20px;
+	height:40px;
+	color:green;
+	text-align:center;
+	padding:1em;
+}

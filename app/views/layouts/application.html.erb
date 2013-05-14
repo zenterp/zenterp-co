@@ -46,6 +46,7 @@
 <body>
 
 <%= render "sections/header" %>
+<%= render "sections/notice" if flash[:notice] %>
 
 <%= yield %>
 <!-- Footer
