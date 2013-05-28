@@ -47,6 +47,7 @@
 
 <%= render "sections/header" %>
 <%= render "sections/notice" if flash[:notice] %>
+<%= link_to "sign out", destroy_user_session_path, method: :delete, class: "sign-out" if current_user  %>
 
 <%= yield %>
 <!-- Footer

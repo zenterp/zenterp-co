@@ -11,9 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514160830) do
+ActiveRecord::Schema.define(:version => 20130515190357) do
 
   create_table "admins", :force => true do |t|
+    t.string    "email",                  :default => "", :null => false
+    t.string    "encrypted_password",     :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",          :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at",                             :null => false
+    t.timestamp "updated_at",                             :null => false
+  end
+
+  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
+  add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+
+  create_table "auth_callbacks", :force => true do |t|
+    t.string    "provider"
+    t.string    "email"
+    t.text      "data"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
@@ -28,24 +54,16 @@ ActiveRecord::Schema.define(:version => 20130514160830) do
     t.datetime "updated_at",                             :null => false
   end
 
-  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
-  add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
-
-  create_table "auth_callbacks", :force => true do |t|
-    t.string   "provider"
-    t.string   "email"
-    t.text     "data"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "youtube_videos", :force => true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.string   "image_path"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string    "title"
+    t.string    "url"
+    t.string    "image_path"
+    t.text      "description"
+    t.timestamp "created_at",  :null => false
+    t.timestamp "updated_at",  :null => false
   end
 
 end
