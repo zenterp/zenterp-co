@@ -4,7 +4,7 @@ class Graphite
   class << self 
     def send_stat(name, value)
       sock = UDPSocket.new
-      sock.send "#{@api_key}.#{name} #{value}\n", 0, "carbon.hostedgraphite.com", 2003
+      sock.send "#{ENV['HOSTEDGRAPHITE_APIKEY']}.#{name} #{value}\n", 0, "carbon.hostedgraphite.com", 2003
     end 
   end 
 end 
