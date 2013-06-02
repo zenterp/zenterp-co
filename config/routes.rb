@@ -10,5 +10,5 @@ Zenterp::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/console', :as => 'admin'
 
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/oauth2callback', to: 'sessions#create'
 end
