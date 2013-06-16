@@ -1,0 +1,1195 @@
+/*
+Style Screen
+
+Author:     Ben Kucsan
+Updated:    January 30 2012
+Copyright:  (c) 2011 Ben Kucsan
+
+All rights reserved.
+*/
+/*
+Resets
+------
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+body {
+    font: 13px sans-serif;
+    *font-size: small;
+    *font: x-small;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+:hover,
+:focus,
+:active {
+    outline: 0
+}
+ol,
+ul {
+    list-style: none
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: ""
+}
+blockquote,
+q {
+    quotes: "" ""
+}
+input,
+select,
+textarea {
+    font-size: 100%;
+    vertical-align: middle;
+}
+input[type="radio"] {
+    vertical-align: text-bottom
+}
+input[type="checkbox"] {
+    vertical-align: bottom;
+    *vertical-align: baseline;
+}
+.ie6 input {
+    vertical-align: text-bottom
+}
+label,
+input[type=button],
+input[type=submit],
+button {
+    cursor: pointer
+}
+.left {
+    float: left
+}
+.right {
+    float: right
+}
+.clear {
+    margin: 0;
+    line-height: 1;
+    clear: both;
+}
+@media screen and (max-device-width: 480px) { 
+	html {
+	    -webkit-text-size-adjust: none;
+	    -ms-text-size-adjust: none;
+	}
+}
+/*
+Typography
+----------
+*/
+body {
+    font: 15px/20px "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+h1,
+.xxl {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -1px;
+}
+h2,
+.xl {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+h3,
+.l {
+    font-size: 25px;
+    line-height: 32px;
+}
+h4,
+.m {
+    font-size: 20px;
+    line-height: 25px;
+}
+small,
+.s {
+    font-size: 10px;
+    line-height: 15px;
+}
+::selection {
+    background: rgb(36,152,207)
+}
+::-moz-selection {
+    background: rgb(36,152,207)
+}
+img::selection {
+    background: transparent
+}
+img::-moz-selection {
+    background: transparent
+}
+body {
+    -webkit-tap-highlight-color: rgba(255,255,255,0)
+}
+/*
+Default Layout: 992px. 
+Gutters: 24px.
+Outer margins: 48px.
+Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896
+*/
+body {
+    background: #222
+}
+body:before {
+    content: url(/images/background-philiprosedale-2.jpg) url(/images/video-chrissacca.jpg) url(/images/video-jessejacobs.jpg) url(/images/video-brianwong.jpg) url(/images/video-tonyconrad.jpg) url(/images/video-philiprosedale.jpg) url(/images/video-jeffsmith.jpg) url(/images/video-jackdorsey.jpg) url(/images/video-philiprosedale-2.jpg) url(/images/video-jasongoldberg.jpg) url(/images/video-denniscrowley.jpg) url(/images/video-johnborthwick.jpg) url(/images/video-leahbusque.jpg) url(/images/video-johnham.jpg) url(/images/video-ryancarson.jpg) url(/images/video-timferriss.jpg) url(/images/video-kevinsystrom.jpg) url(/images/video-scottharrison.jpg) url(/images/video-sahillavingia.jpg) url(/images/video-ommalik.jpg) url(/images/video-elonmusk.jpg) url(/images/video-mattrogers.jpg) url(/images/video-tomconrad.jpg) url(/images/video-benhorowitz.jpg) url(/images/video-melodymccloskey.jpg) url(/images/video-tonyhsieh.jpg) url(/images/video-davemorin.jpg) url(/images/video-hosainrahman.jpg) url(/images/video-robynsuefisher.jpg) url(/images/video-chadhurley.jpg) url(/images/video-jimgilliam.jpg);
+    display: none;
+}
+#wrapper {
+    padding-bottom: 20px;
+    background: url(/images/background-philiprosedale-2.jpg) no-repeat #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+/*
+Header
+------
+*/
+a.logo,
+a.logo:visited {
+    margin: 40px 0 0 40px;
+    text-decoration: none;
+    font-size: 40px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    text-indent: -9999px;
+    width: 250px;
+    height: 29px;
+    background: url(/images/logo.png) no-repeat;
+    display: block;
+    float: left;
+}
+a.logo:hover {
+    background-position-y: -49px;
+    border-color: rgba(255,255,255,1);
+}
+.navigation {
+    margin-right: 40px;
+    padding: 47px 0 0 0;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(255,255,255,.8);
+    float: right;
+}
+.navigation li {
+    float: left
+}
+.navigation li a.twitter,
+.navigation li a.twitter:visited {
+    margin: -4px 0 0 0;
+    width: 96px;
+    height: 23px;
+    background: url(../images/twitter-logo.png) no-repeat;
+    display: block;
+}
+.navigation li a.twitter:hover {
+    background-position-y: -23px
+}
+.navigation li a.facebook,
+.navigation li a.facebook:visited {
+    margin: -4px 0 0 20px;
+    width: 103px;
+    height: 23px;
+    background: url(../images/facebook-logo.png) no-repeat;
+    display: block;
+}
+.navigation li a.facebook:hover {
+    background-position-y: -23px
+}
+.navigation li a:hover,
+.navigation li a.current {
+    color: rgb(255,255,255)
+}
+.navigation-mobile {
+    display: none
+}
+/*
+Video
+-----
+*/
+#video {
+    margin-bottom: 30px;
+    padding-top: 50px;
+    min-height: 567px;
+}
+#a,
+#b,
+#c,
+#d,
+#e {
+    display: none
+}
+.container {
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+}
+.video {
+    margin-bottom: 25px;
+    width: 800px;
+    height: 450px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 30px rgb(0,0,0);
+    -moz-box-shadow: 0 5px 30px rgb(0,0,0);
+    box-shadow: 0 5px 30px rgb(0,0,0);
+}
+#video .jimgilliam {
+    background: url(/images/video-jimgilliam.jpg) no-repeat #000
+}
+#video .chadhurley {
+    background: url(/images/video-chadhurley.jpg) no-repeat #000
+}
+#video .robynsuefisher {
+    background: url(/images/video-robynsuefisher.jpg) no-repeat #000
+}
+#video .hosainrahman {
+    background: url(/images/video-hosainrahman.jpg) no-repeat #000
+}
+#video .davemorin {
+    background: url(/images/video-davemorin.jpg) no-repeat #000
+}
+#video .tonyhsieh {
+    background: url(/images/video-tonyhsieh.jpg) no-repeat #000
+}
+#video .melodymccloskey {
+    background: url(/images/video-melodymccloskey.jpg) no-repeat #000
+}
+#video .benhorowitz {
+    background: url(/images/video-benhorowitz.jpg) no-repeat #000
+}
+#video .tomconrad {
+    background: url(/images/video-tomconrad.jpg) no-repeat #000
+}
+#video .mattrogers {
+    background: url(/images/video-mattrogers.jpg) no-repeat #000
+}
+#video .elonmusk {
+    background: url(/images/video-elonmusk.jpg) no-repeat #000
+}
+#video .ommalik {
+    background: url(/images/video-ommalik.jpg) no-repeat #000
+}
+#video .sahillavingia {
+    background: url(/images/video-sahillavingia.jpg) no-repeat #000
+}
+#video .scottharrison {
+    background: url(/images/video-scottharrison.jpg) no-repeat #000
+}
+#video .kevinsystrom {
+    background: url(/images/video-kevinsystrom.jpg) no-repeat #000
+}
+#video .timferriss {
+    background: url(/images/video-timferriss.jpg) no-repeat #000
+}
+#video .ryancarson {
+    background: url(/images/video-ryancarson.jpg) no-repeat #000
+}
+#video .johnham {
+    background: url(/images/video-johnham.jpg) no-repeat #000
+}
+#video .leahbusque {
+    background: url(/images/video-leahbusque.jpg) no-repeat #000
+}
+#video .johnborthwick {
+    background: url(/images/video-johnborthwick.jpg) no-repeat #000
+}
+#video .denniscrowley {
+    background: url(/images/video-denniscrowley.jpg) no-repeat #000
+}
+#video .jasongoldberg {
+    background: url(/images/video-jasongoldberg.jpg) no-repeat #000
+}
+#video .philiprosedale-2 {
+    background: url(/images/video-philiprosedale-2.jpg) no-repeat #000
+}
+#video .chrissacca {
+    background: url(/images/video-chrissacca.jpg) no-repeat #000
+}
+#video .jessejacobs {
+    background: url(/images/video-jessejacobs.jpg) no-repeat #000
+}
+#video .brianwong {
+    background: url(/images/video-brianwong.jpg) no-repeat #000
+}
+#video .tonyconrad {
+    background: url(/images/video-tonyconrad.jpg) no-repeat #000
+}
+#video .philiprosedale {
+    background: url(/images/video-philiprosedale.jpg) no-repeat #000
+}
+#video .jeffsmith {
+    background: url(/images/video-jeffsmith.jpg) no-repeat #000
+}
+#video .jackdorsey {
+    background: url(/images/video-jackdorsey.jpg) no-repeat #000
+}
+.video img {
+    cursor: pointer
+}
+h2 {
+    margin-bottom: 10px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(255,255,255);
+}
+h2 span {
+    font-weight: normal;
+    color: rgba(255,255,255,.4);
+}
+#video p {
+    color: rgba(255,255,255,.6);
+    width: 420px;
+}
+p a,
+p a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgba(255,255,255,.9);
+}
+p a:hover {
+    text-decoration: underline
+}
+.social {
+    margin-top: 7px;
+    padding: 3px 0 0 8px;
+    text-align: right;
+    width: 285px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    position: absolute;
+    top: 473px;
+    right: 0;
+}
+.social:hover {
+    margin-top: 3px;
+    padding: 7px 0 1px 8px;
+    background: rgba(255,255,255,.9);
+}
+.social ul {
+    display: none
+}
+.social:hover ul {
+    display: block
+}
+.social li {
+    padding: 0 6px 0 0;
+    display: block;
+    float: left;
+}
+a.share,
+a.share:visited {
+    padding: 11px 14px 9px 14px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(255,255,255);
+    background: rgba(36,152,207,.8);
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+}
+a.share:hover,
+.social:hover a.share,
+.social:hover a.share:visited {
+    color: rgb(36,152,207);
+    background: none;
+}
+/*
+Article
+-------
+*/
+#article {
+    padding: 40px 0 60px 0
+}
+h1 {
+    margin-bottom: 10px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(255,255,255);
+}
+h3 {
+    margin-bottom: 10px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(255,255,255);
+}
+#article h4 {
+    margin-bottom: 30px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(255,255,255,.6);
+    width: 500px;
+}
+#article p {
+    margin: 10px 0 20px 0;
+    color: rgba(255,255,255,.6);
+    max-width: 500px;
+}
+#article p b {
+    color: rgba(255,255,255,.8)
+}
+#article blockquote {
+    margin: 0 20px 15px -100px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(255,255,255);
+    width: 250px;
+    float: left;
+}
+#article .step-1 {
+    margin: 30px 0 0 0;
+    width: 225px;
+    float: left;
+}
+h3 .step {
+    margin: 0 15px 0 -60px;
+    padding: 4px 11px 4px 11px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 5px solid rgb(255,255,255);
+}
+#article p.action {
+    margin: 50px 0 20px 0
+}
+a.producer-slot,
+a.producer-slot:visited {
+    margin-left: -10px;
+    padding: 11px 25px 12px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    background: rgb(35,152,207);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(53,190,255)), color-stop(100%,rgb(35,152,207)));
+    background: -webkit-linear-gradient(top, rgb(53,190,255) 0%,rgb(35,152,207) 100%);
+    background: -moz-linear-gradient(top, rgb(53,190,255) 0%, rgb(35,152,207) 100%);
+    background: -o-linear-gradient(top, rgb(53,190,255) 0%,rgb(35,152,207) 100%);
+    background: -ms-linear-gradient(top, rgb(53,190,255) 0%,rgb(35,152,207) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35beff', endColorstr='#2398cf',GradientType=0 );
+    background: linear-gradient(top, rgb(53,190,255) 0%,rgb(35,152,207) 100%);
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    border-radius: 21px;
+}
+a.producer-slot:hover {
+    text-decoration: none;
+    background: rgb(35,152,207);
+}
+a.producer-slot:active {
+    background: rgb(35,152,207);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+    box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+}
+#article p.s {
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(255,255,255,.2);
+}
+#article .illustration-video {
+    margin-top: 30px;
+    width: 525px;
+    height: 375px;
+    background: rgb(255,255,255);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: right;
+}
+#article .step-2 {
+    margin: 50px 0 40px 275px;
+    width: 500px;
+    float: left;
+}
+.section {
+    border-top: 5px solid rgba(255,255,255,.07)
+}
+a.top,
+a:visited.top {
+    margin-top: 60px;
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    color: rgba(255,255,255,.2);
+    float: right;
+}
+a:hover.top {
+    color: rgba(255,255,255,.6)
+}
+#article .step-3 {
+    margin: 60px 0 50px 0;
+    width: 300px;
+    float: left;
+}
+#article .producers {
+    margin: 15px 0 0 0;
+    width: 500px;
+}
+#article .producers li {
+    margin: 10px 10px 0 0;
+    width: 72px;
+    height: 72px;
+    background: rgb(255,255,255);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: left;
+}
+/*
+Tinyscrollbar
+-------------
+*/
+#scrollbar {
+    margin-bottom: 50px;
+    width: 100%;
+}
+#scrollbar .scrollbar {
+    height: 8px;
+    position: relative;
+    top: 350px;
+}
+#scrollbar .track {
+    margin: 0 10px;
+    height: 8px;
+    position: relative;
+}
+#scrollbar .thumb {
+    width: 410px;
+    height: 8px;
+    background: rgba(255,255,255,.2);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+#scrollbar .thumb .end {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+#scrollbar .disable {
+	display: none
+}
+#scrollbar .viewport {
+    width: 100%;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+#scrollbar .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*
+Prev & Next Buttons
+-------------------
+*/
+.prev {
+    width: 180px;
+    height: 293px;
+/*     background: url(/images/prev.png) no-repeat; */
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -95px;
+    z-index: 1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.next {
+    width: 180px;
+    height: 293px;
+/*     background: url(/images/next.png) no-repeat; */
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -95px;
+    z-index: 1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+a.buttons:hover {
+    background-color: rgba(255,255,255,.9)
+}
+a.buttons:active {
+    margin-top: 4px
+}
+.buttons.disable {
+    display: none
+}
+/*
+Episode List (Always add 210px when new a new episode is up)
+------------------------------------------------------------
+*/
+.viewport {
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+#episodes {
+    padding: 20px 0;
+    min-height: 350px;
+    position: relative;
+    overflow-y: auto;
+}
+.episode-list {
+    width: 6310px /* <- Here */
+}
+.episode-list li a,
+.episode-list li a:visited {
+    margin-left: 10px;
+    padding: 213px 15px 10px 15px;
+    text-decoration: none;
+    width: 170px;
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+    float: left;
+    position: relative;
+    opacity: .6;
+}
+.episode-list li a:hover,
+.episode-list li.current a,
+.episode-list li.current a:visited {
+    opacity: 1
+}
+.episode-list li.current a,
+.episode-list li.current a:visited {
+    -webkit-box-shadow: 0 5px 30px rgb(0,0,0);
+    -moz-box-shadow: 0 5px 30px rgb(0,0,0);
+    box-shadow: 0 5px 30px rgb(0,0,0);
+    z-index: 10;
+}
+.episode-list li.jimgilliam a,
+.episode-list li.jimgilliam a:visited {
+    background: url(/images/small-jimgilliam.jpg) no-repeat #fff
+}
+.episode-list li.chadhurley a,
+.episode-list li.chadhurley a:visited {
+    background: url(/images/small-chadhurley.jpg) no-repeat #fff
+}
+.episode-list li.robynsuefisher a,
+.episode-list li.robynsuefisher a:visited {
+    background: url(/images/small-robynsuefisher.jpg) no-repeat #fff
+}
+.episode-list li.hosainrahman a,
+.episode-list li.hosainrahman a:visited {
+    background: url(/images/small-hosainrahman.jpg) no-repeat #fff
+}
+.episode-list li.davemorin a,
+.episode-list li.davemorin a:visited {
+    background: url(/images/small-davemorin.jpg) no-repeat #fff
+}
+.episode-list li.tonyhsieh a,
+.episode-list li.tonyhsieh a:visited {
+    background: url(/images/small-tonyhsieh.jpg) no-repeat #fff
+}
+.episode-list li.melodymccloskey a,
+.episode-list li.melodymccloskey a:visited {
+    background: url(/images/small-melodymccloskey.jpg) no-repeat #fff
+}
+.episode-list li.benhorowitz a,
+.episode-list li.benhorowitz a:visited {
+    background: url(/images/small-benhorowitz.jpg) no-repeat #fff
+}
+.episode-list li.tomconrad a,
+.episode-list li.tomconrad a:visited {
+    background: url(/images/small-tomconrad.jpg) no-repeat #fff
+}
+.episode-list li.mattrogers a,
+.episode-list li.mattrogers a:visited {
+    background: url(/images/small-mattrogers.jpg) no-repeat #fff
+}
+.episode-list li.elonmusk a,
+.episode-list li.elonmusk a:visited {
+    background: url(/images/small-elonmusk.jpg) no-repeat #fff
+}
+.episode-list li.ommalik a,
+.episode-list li.ommalik a:visited {
+    background: url(/images/small-ommalik.jpg) no-repeat #fff
+}
+.episode-list li.sahillavingia a,
+.episode-list li.sahillavingia a:visited {
+    background: url(/images/small-sahillavingia.jpg) no-repeat #fff
+}
+.episode-list li.scottharrison a,
+.episode-list li.scottharrison a:visited {
+    background: url(/images/small-scottharrison.jpg) no-repeat #fff
+}
+.episode-list li.kevinsystrom a,
+.episode-list li.kevinsystrom a:visited {
+    background: url(/images/small-kevinsystrom.jpg) no-repeat #fff
+}
+.episode-list li.timferriss a,
+.episode-list li.timferriss a:visited {
+    background: url(/images/small-timferriss.jpg) no-repeat #fff
+}
+.episode-list li.ryancarson a,
+.episode-list li.ryancarson a:visited {
+    background: url(/images/small-ryancarson.jpg) no-repeat #fff
+}
+.episode-list li.johnham a,
+.episode-list li.johnham a:visited {
+    background: url(/images/small-johnham.jpg) no-repeat #fff
+}
+.episode-list li.leahbusque a,
+.episode-list li.leahbusque a:visited {
+    background: url(/images/small-leahbusque.jpg) no-repeat #fff
+}
+.episode-list li.johnborthwick a,
+.episode-list li.johnborthwick a:visited {
+    background: url(/images/small-johnborthwick.jpg) no-repeat #fff
+}
+.episode-list li.denniscrowley a,
+.episode-list li.denniscrowley a:visited {
+    background: url(/images/small-denniscrowley.jpg) no-repeat #fff
+}
+.episode-list li.jasongoldberg a,
+.episode-list li.jasongoldberg a:visited {
+    background: url(/images/small-jasongoldberg.jpg) no-repeat #fff
+}
+.episode-list li.philiprosedale-2 a,
+.episode-list li.philiprosedale-2 a:visited {
+    background: url(/images/small-philiprosedale-2.jpg) no-repeat #fff
+}
+.episode-list li.chrissacca a,
+.episode-list li.chrissacca a:visited {
+    background: url(/images/small-chrissacca.jpg) no-repeat #fff
+}
+.episode-list li.jessejacobs a,
+.episode-list li.jessejacobs a:visited {
+    background: url(/images/small-jessejacobs.jpg) no-repeat #fff
+}
+.episode-list li.brianwong a,
+.episode-list li.brianwong a:visited {
+    background: url(/images/small-brianwong.jpg) no-repeat #fff
+}
+.episode-list li.tonyconrad a,
+.episode-list li.tonyconrad a:visited {
+    background: url(/images/small-tonyconrad.jpg) no-repeat #fff
+}
+.episode-list li.philiprosedale a,
+.episode-list li.philiprosedale a:visited {
+    background: url(/images/small-philiprosedale.jpg) no-repeat #fff
+}
+.episode-list li.jeffsmith a,
+.episode-list li.jeffsmith a:visited {
+    background: url(/images/small-jeffsmith.jpg) no-repeat #fff
+}
+.episode-list li.jackdorsey a,
+.episode-list li.jackdorsey a:visited {
+    background: url(/images/small-jackdorsey.jpg) no-repeat #fff
+}
+.episode-list li.empty a,
+.episode-list li.empty a:visited {
+    background: rgba(255,255,255,.2)
+}
+#episodes li .watch {
+    padding: 11px 14px 10px 14px;
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgb(255,255,255);
+    background: rgba(36,152,207,.8);
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    position: absolute;
+    top: 82px;
+    left: 62px;
+    opacity: 0;
+}
+#episodes li:hover .watch {
+    opacity: 1
+}
+#episodes .episode-number {
+    font-family: "Varela Round", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    color: rgba(255,255,255,.9);
+    position: absolute;
+    top: 168px;
+}
+#episodes .episode-title {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgb(34,34,34);
+}
+#episodes .episode-description {
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgb(153,153,153);
+    display: block;
+}
+/*
+Subscribe
+---------
+*/
+#subscribe {
+    padding: 42px 0 200px 0
+}
+#subscribe h3 {
+    margin-top: 8px;
+    width: 210px;
+    float: left;
+}
+#subscribe .column {
+    width: 550px;
+    float: left;
+}
+#subscribe .field {
+    padding: 13px 20px 13px 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .3);
+    width: 330px;
+    background: #111;
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+    -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    border: 0;
+}
+#subscribe .field:focus,
+#subscribe .field.filled {
+    color: rgba(255, 255, 255, .8);
+    background: #111;
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+    -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1) inset;
+}
+#subscribe .button {
+    margin-left: 10px;
+    padding: 12px 25px 11px 56px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .8);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    background: url(/images/email.png) 15px 14px no-repeat #e4e4e4;
+    background: url(/images/email.png) 15px 14px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#8d8d8d));
+    background: url(/images/email.png) 15px 14px no-repeat, -moz-linear-gradient(top, #e4e4e4 0%, #8d8d8d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#8d8d8d',GradientType=0);
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    border: 0;
+}
+#subscribe .button:hover {
+    background: url(/images/email.png) 15px 14px no-repeat #e4e4e4;
+    background: url(/images/email.png) 15px 14px no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#7d7d7d));
+    background: url(/images/email.png) 15px 14px no-repeat, -moz-linear-gradient(top, #e4e4e4 0%, #7d7d7d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#7d7d7d',GradientType=0);
+}
+#subscribe .button:active {
+    background: url(/images/email.png) 15px 14px no-repeat #8d8d8d;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5) inset;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5) inset;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5) inset;
+}
+#subscribe .column p {
+    margin: 20px 0 0 20px;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(255,255,255,.6);
+    width: 300px;
+}
+#subscribe .column .s {
+    font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba(255,255,255,.2);
+}
+#subscribe .column .s a,
+#subscribe .column .s a:visited {
+    text-decoration: none;
+    font-weight: normal;
+    color: rgba(255,255,255,.2);
+}
+#subscribe .column .s a:hover {
+    text-decoration: none;
+    color: rgba(255,255,255,.4);
+}
+/*
+Tablet Layout: 768px.
+Gutters: 24px.
+Outer margins: 28px.
+Inherits styles from: Default Layout.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	body {
+	    width: 991px
+	}
+}
+/*
+Mobile Layout: 320px.
+Gutters: 24px.
+Outer margins: 34px.
+Inherits styles from: Default Layout.
+-------------------------------------------------------------------------------
+cols    1     2      3
+px      68    160    252
+*/
+@media only screen and (max-width: 767px) { 
+	body {
+	    width: 100%
+	}
+	#wrapper {
+	    padding: 35px 0 25px 0;
+	    min-height: 0;
+	    background: url(/images/background-philiprosedale-2@2x.jpg) top center no-repeat #000;
+	    -webkit-background-size: auto;
+	    -moz-background-size: auto;
+	    -o-background-size: auto;
+	    background-size: auto;
+	}
+	a.logo,
+	a.logo:visited {
+	    margin: 0 auto;
+	    background: url(/images/logo.png) no-repeat;
+	    float: none;
+	}
+	.navigation {
+	    display: none
+	}
+	.navigation-mobile {
+	    padding-top: 30px;
+	    display: block;
+	}
+	.navigation-mobile li {
+	    padding: 0 20px;
+	    text-align: center;
+	    color: rgba(255,255,255,.4);
+	    display: block;
+	}
+	.navigation-mobile li p {
+	    padding: 15px 20px 50px 20px
+	}
+	.navigation-mobile li p a,
+	.navigation-mobile li p a:visited {
+	    text-decoration: none;
+	    font-weight: bold;
+	    color: rgba(255,255,255,.4);
+	}
+	.navigation-mobile li p a:active {
+	    color: rgba(255,255,255,.8)
+	}
+	a.button,
+	a:visited.button {
+	    padding: 17px 60px 17px 60px;
+	    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	    text-decoration: none;
+	    font-size: 18px;
+	    line-height: 18px;
+	    font-weight: bold;
+	    color: rgba(0,0,0,.8);
+	    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#8d8d8d));
+	    -webkit-border-radius: 25px;
+	    display: block;
+	}
+	a:active.button {
+	    background: #8d8d8d;
+	    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+	    box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+	}
+	#video {
+	    display: none
+	}
+	#scrollbar,
+	#episodes {
+	    display: none
+	}
+	#subscribe {
+	    padding: 20px 0 20px 0
+	}
+	#subscribe .container {
+	    width: 100%
+	}
+	#subscribe .column {
+	    text-align: center;
+	    width: 100%;
+	    float: none;
+	}
+	#subscribe h3,
+	#subscribe input,
+	#subscribe .button,
+	#subscribe p {
+	    display: none
+	}
+	#subscribe p.s {
+	    margin: 0;
+	    padding: 0;
+	    font-family: Helvetica, Arial, sans-serif;
+	    width: auto;
+	    display: block;
+	}
+}
+/*
+Mobile Layout: 640px.
+Gutters: 24px.
+Outer margins: 34px.
+Inherits styles from: Default Layout.
+-------------------------------------------------------------------------------
+cols    1     2      3
+px      68    160    252
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+	a.logo,
+	a.logo:visited {
+	    margin: 0 auto;
+	    background: url(/images/logo@2x.png) no-repeat;
+	    background-size: 250px 29px;
+	    float: none;
+	}
+}
+/*
+Wide Mobile Layout: 480px.
+Gutters: 24px.
+Outer margins: 22px.
+Inherits styles from: Default Layout, Mobile Layout.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436
+*/
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	body {
+
+	}
+}

@@ -6,7 +6,18 @@ class Ability
     if user && user.admin?
       can :access, :rails_admin
       can :dashboard
+      can :manage, YoutubeVideo, training: true
     end
+
+    if user 
+      can :access, :rails_admin
+      can :dashboard
+      can :read, YoutubeVideo,training: true       
+
+      can :read, AuthCallback, email: user.email
+      can :destroy, AuthCallback, email: user.email
+    end 
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

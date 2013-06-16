@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://foundation.bz/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Zenterp Training — Oauth Protocol with Coinbase and Ruby/Omniauth</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+        <script type="text/javascript" async="" src="/foundation_files/ga.js"></script><script src="./foundation_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./foundation_files/jquery.min.js"></script>
+        <script type="text/javascript" src="/foundation_files/tinyscrollbar.min.js"></script>
+        <script type="text/javascript" src="/foundation_files/scripts.js"></script>
+        <script type="text/javascript" src="/foundation_files/plusone.js" gapi_processed="true"></script>
+        <link href="/foundation_files/css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" media="screen" href="/foundation_files/style-screen.css">
+
+
+        <style>
+            #logo {
+              position: absolute;
+              font-size: 30px;
+              left:2em;
+              top:1.4em;
+              text-decoration:none;
+              color:#aaa;
+            }
+
+            .viewport {
+                overflow: "scroll";
+            }
+
+            li.tagline { 
+                font-size:15px;
+                margin-top:-10px;
+            }
+        </style>
+    </head>
+    <body data-twttr-rendered="true">
+        <div id="wrapper">
+            <div id="header">
+                <a href="/" id="logo">ZENTERP TRAINING</a>
+                <ul class="navigation">
+<!--
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../become-a-producer">Become a producer</a></li>
+                    <li><a href="http://www.facebook.com/pages/foundation/173386666064931" class="facebook">Facebook</a></li>
+-->
+                    <li class="tagline">The Free Dev Bootcamp</li>
+                    <li><a href="http://www.facebook.com/pages/Foundation/121495347950603" class="facebook"></a></li>
+                </ul>
+                <ul class="navigation-mobile">
+                    <li><p>Private newsletter and interviews with industry visionaries about their stories <i>by</i> <a href="http://twitter.com/kevinrose" ontouchstart="" onclick="javascript:var e = document.createEvent(&quot;CustomEvent&quot;); e.initCustomEvent(&quot;hootletEvent&quot;, true, true, {type: &quot;userHandle&quot;, value: &quot;kevinrose&quot;});  document.body.dispatchEvent(e); return false;">Kevin Rose</a>.</p></li>
+                    <li><a href="http://itunes.apple.com/us/podcast/foundation-hd-mp4-30fps/id412887856" ontouchstart="" class="button">Open in iTunes</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <%= render "videos/video" %>
+            <div id="scrollbar">            <!--
+
+                <div class="scrollbar" style="width: 1276px;">
+                    <div class="track" style="width: 1256px;">
+                        <div class="thumb" style="left: 0px; width: 410px;">
+                            <div class="end">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            -->
+                <div class="viewport" style="overflow:scroll">
+	                <a href="http://foundation.bz/#" class="prev"></a>
+	                <a href="http://foundation.bz/#" class="next" style="right: 0px;"></a>
+                    <div class="overview" style="left: 0px;">
+                        <div id="episodes">
+                            <ul class="episode-list">
+                                <% 10.times do %>
+                                  <%= render "videos/video_tile" %>
+                                <% end %>                                                       
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="subscribe">
+            <div class="container">
+                <h3>Get Foundation</h3>
+                <div class="column">
+                    <form action="https://tinyletter.com/foundation" method="post" target="popupwindow" onsubmit="window.open(&#39;https://tinyletter.com/foundation&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=800,height=600&#39;);return true">
+                        <input id="tlemail" name="emailaddress" type="text" value="your@email.com" onblur="if(this.value==&#39;&#39;){this.value=&#39;your@email.com&#39;;this.className=&#39;field&#39;;}else{this.className=&#39;field filled&#39;;}" onfocus="if(this.value==&#39;your@email.com&#39;)this.value=&#39;&#39;" class="field">
+                        <input type="hidden" value="1" name="embed">
+                        <input type="submit" value="Sign Up" class="button">
+                    </form>
+                    <p>Subscribe to Foundation newsletter to get the latest video delivered in your inbox.</p>
+                    <p class="s">© <a href="/foundation_files/foundation.html" ontouchstart="">Foundation</a> + <a href="http://ideadivision.com/" ontouchstart="">Idea Division</a>. With <a href="http://mediatemple.net/" ontouchstart="">(mt) Media Temple</a>.</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25567934-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>    
+</body></html>

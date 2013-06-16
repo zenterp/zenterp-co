@@ -16,14 +16,11 @@
 					<li class="dropdown success">
 					<a href="/"><i class="icon-home icon-white"></i> Home</a>
 					</li>
-					<li class="dropdown primary">
-					<a href="http://zenterp-3d-store.herokuapp.com"><i class="icon-star icon-white"></i> Products</a>
+					<li class="dropdown info">
+					<a href="/videos"><i class="icon-bullhorn icon-white"></i>Videos</a>
 					</li>
 					<li class="dropdown warning">
-					<a href="http://training.zenterp.co"><i class="icon-camera icon-white"></i> Training</a>
-					</li>
-					<li class="dropdown info">
-					<a href="/research"><i class="icon-bullhorn icon-white"></i>Labs</a>
+					<a href="http://training.zenterp.co"><i class="icon-camera icon-white"></i> Intern</a>
 					</li>
 					<li class="dropdown danger">
 					<a href="/contact"><i class="icon-envelope icon-white"></i> Contact</a>
@@ -31,6 +28,12 @@
 					<li class="dropdown inverse">
 					<a href="/team"><i class="icon-leaf icon-white"></i> Team</a>
 					</li>
+
+					<% if current_user.present? && current_user.admin? %>
+					<li class="dropdown primary">
+					<a href="/console"><i class="icon-leaf icon-white"></i> Admin Mode</a>
+					</li>
+					<% end %>
 				</ul>
 				</nav>
 			</div>
@@ -38,4 +41,6 @@
 		</div>
 	</div>
 </div>
+
+
 </header>

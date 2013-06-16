@@ -8,7 +8,11 @@ Zenterp::Application.routes.draw do
 
   resources :research, only: :index
 
+  resources :videos, only: [:index, :show]
+
   mount RailsAdmin::Engine => '/console', :as => 'admin'
 
   get '/oauth2callback', to: 'sessions#create'
+
+  get "admin/videos" => "admin/videos#index"
 end
