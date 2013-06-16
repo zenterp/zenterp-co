@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130616193430) do
+ActiveRecord::Schema.define(:version => 20130616220755) do
 
   create_table "admins", :force => true do |t|
     t.string    "email",                  :default => "", :null => false
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20130616193430) do
     t.text     "meta_description"
     t.text     "meta_keywords"
     t.boolean  "training"
+    t.text     "blog_post"
   end
 
   add_index "youtube_videos", ["training"], :name => "index_youtube_videos_on_training"
