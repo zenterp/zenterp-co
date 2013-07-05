@@ -10,7 +10,8 @@
 			</a>
 			<!-- end logo -->
 			<!-- top menu -->
-			<div>
+
+			<div style='float:right'>
 				<nav>
 				<ul class="nav topnav">
 					<li class="dropdown success">
@@ -18,10 +19,6 @@
 					</li>
 					<li class="dropdown info">
 					<a href="/training"><i class="icon-bullhorn icon-white"></i>Training</a>
-					</li>
-
-					<li class="dropdown danger">
-					<a href="/team"><i class="icon-envelope icon-white"></i>Team</a>
 					</li>
 
 					<% if current_user.present? && current_user.admin? %>
@@ -32,6 +29,8 @@
 				</ul>
 				</nav>
 			</div>
+			<h1 style='float:right;padding:0.5em 2em 0 0'>questions? email me@stevenzeiler.com</h1>
+
 			<!-- end menu -->
 		</div>
 	</div>

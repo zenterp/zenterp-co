@@ -19,5 +19,4 @@ Zenterp::Application.routes.draw do
 
   get 'training', to: 'training/resources#my_videos'
   get 'resources', to: 'training/resources#my_videos'
-
 end
