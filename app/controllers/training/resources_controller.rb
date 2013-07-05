@@ -1,12 +1,12 @@
 class Training::ResourcesController < ApplicationController
   def railscasts
     @title = 'Training Resources - Railcasts'
-    @railscasts = Railscast.top_100
+    @railscasts = Railscast.top_100 # network
   end 
 
   def my_videos
     @title = 'Training Resources - My Programming Tutorials'
-    @videos = YoutubeVideo.all
+    @videos = YoutubeVideo.all # database
   end 
 
   def peepcode
@@ -23,9 +23,10 @@ class Training::ResourcesController < ApplicationController
 
   def newsletters
     @title = 'Training Resources - Weekly Newsletters'
-    @html5_weekly_newsletters = []
-    @javascript_weekly_newsletters = JavascriptWeekly.all
-    @ruby_weekly_newsletters = RubyWeekly.all
+    # This currently makes three network calls!
+    @html5_weekly_newsletters = HTML5Weekly.all # network
+    @javascript_weekly_newsletters = JavascriptWeekly.all # network
+    @ruby_weekly_newsletters = RubyWeekly.all # network
 
     @status_code_newsletters = []
     @postgresql_weekly_newsletters = []

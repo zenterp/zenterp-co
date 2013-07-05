@@ -1,21 +1,39 @@
 <%= render partial: 'training/resources/navigation' %>
+<h2 style='padding:0.5em 2em;'>I absolutely love Peter Cooper's weekly newsletters! The Javascript Weekly Newsletter makes my Friday even better, and over months I went back and read every single edition. Addictive.</h2>
+
 
 <div class='span12' style='width:100%'>
   <section class='span4'>
     <div class='well'>
       <%= image_tag 'peter_cooper.png', style:'float:right;vertical-align:bottom;clear:both' %>
-      <h1>HTML5 Weekly</h1>
+      <h1><%= link_to 'HTML5 Weekly', 'http://html5weekly.com', style: 'color:purple' %></h1>
 
       <p>curated by Peter Cooper</p>
 
       <div style='width:100%;display:block;clear:both'></div>
     </div>
+
+    <ul style='list-style:none; margin-left:0px'>
+      <% @html5_weekly_newsletters.each do |archive, links| %>
+        <li style='padding:1em;border:1px solid #ccc'>
+          <span style='float:right'>
+            <%= links['links'].count %> links
+          </span>
+          <%= link_to "##{archive}", archive['url'], style: 'font-color:purple;font-size:200%' %><br/>
+
+          <% links['links'].each do |link| %>
+            <%= link_to link['text'], link['link'] %> | 
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
   </section>
 
   <section class='span4'>
     <div class='well'>
-      <%= image_tag 'peter_cooper.png', style:'float:right;vertical-align:bottom;clear:both' %>
-      <h1>Ruby Weekly</h1>
+      <%= image_tag 'peter_cooper_2_small.jpg', style:'float:right;vertical-align:bottom;clear:both' %>
+      <h1><%= link_to 'Ruby Weekly', 'http://rubyweekly.com',style:'color:orange' %></h1>
 
       <p>curated by Peter Cooper</p>
 
@@ -41,8 +59,8 @@
 
   <section class='span4'>
     <div class='well'>
-      <%= image_tag 'peter_cooper.png', style:'float:right;vertical-align:bottom;clear:both' %>
-      <h1>Javascript Weekly</h1>
+      <%= image_tag 'peter_cooper_3_small.jpg', style:'float:right;vertical-align:bottom;clear:both' %>
+      <h1><%= link_to 'Javascript Weekly', 'http://javascript_weekly.com', style:'color:red' %></h1>
 
       <p>curated by Peter Cooper</p>
 
@@ -55,7 +73,7 @@
           <span style='float:right'>
             <%= links['links'].count %> links
           </span>
-          <%= link_to "##{archive}", archive['url'], style: 'font-color:red;font-size:200%' %><br/>
+          <%= link_to "##{archive}", archive['url'], style: 'font-color:purple;font-size:200%' %><br/>
 
           <% links['links'].each do |link| %>
             <%= link_to link['text'], link['link'] %> | 
