@@ -15,8 +15,10 @@ gem 'omniauth-linkedin'
 gem 'rspec-rails'
 gem 'cancan'
 gem 'httparty'
+gem 'tumblr_client'
 
 group :development do 
+  gem 'pry'
   gem 'sqlite3'
 end
 

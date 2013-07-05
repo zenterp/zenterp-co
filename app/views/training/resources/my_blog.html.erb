@@ -1,0 +1,22 @@
+<%= render partial: 'training/resources/navigation' %>
+
+<div id='masonryContainer' width='100%;margin-top:-2em'>
+<% @posts['posts'].each do |post| %>
+  <% min_height = 350 - Random.rand(100) %>
+  <% if !(['video','photo'].include? post['type']) %>
+    <div class='item' style="border:1px solid #ccc;background-  color:#fff;width:200px;padding:2em;min-height:<%= min_height %>px">
+      <h2><%= link_to post['title'], post['post_url'] %></h2>
+      <p style='display:block;'><%= raw post['body'] %></p>
+      <p><%= post['tags'] %></p>
+    </div>
+  <% end %>
+<% end %>
+
+</div>
+
+<script>
+  $(function(){
+    var el = document.getElementById('masonryContainer');
+    new Masonry(el, { itemSelector: '.item' , itemWidth: '200px' });
+  })
+</script>

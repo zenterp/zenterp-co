@@ -42,4 +42,9 @@ class Training::ResourcesController < ApplicationController
     @codeschool_courses = []
     @codeschool_videos = []
   end 
+
+  def my_blog
+    client = Tumblr::Client.new
+    @posts = client.posts('stevenzeiler.tumblr.com', limit: 100)
+  end 
 end 
