@@ -14,6 +14,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
 gem 'rspec-rails'
 gem 'cancan'
+gem 'httparty'
 
 group :development do 
   gem 'sqlite3'

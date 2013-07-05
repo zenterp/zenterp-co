@@ -1,0 +1,94 @@
+
+<%= render partial: 'training/resources/navigation' %>
+
+<div class='well' style='min-height:150px'>
+  <div class='float-left; width:75%; padding-bottom:3em' class='span8'>
+    <p style='font-size:150%;text-align:center;'>Railscasts are ten to fifteen minute screencasts  demonstrating features of Ruby on Rails and building cool proudctions. Ryan Bates  produces every video from his own knowledge. Over two years I may have learned   more from him about Ruby on Rails and programming than any other person.
+
+    <%= image_tag 'ryan_bates.png', style: 'float:right; width:100px; margin:10px' %>
+  </p>
+  
+    <h3 style='text-align:center;'><b>
+      I have selected below the <u>TOP 100 EPISODES</u> that I think are vital   to buiding apps with Rails.</b>
+    </h3>
+
+  </div>
+
+
+</div>
+
+
+<div style='float:left;margin-top:1em;margin-left:6em' class='span3'>
+
+
+  <section>
+    <h2>1) Railscasts 1-25 </h2>
+    <table class='table table-striped'>
+      <% @railscasts[0..24].each_with_index do |railscast, i| %> 
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= link_to railscast['title'], railscast['url'] %></td>
+          <td><%= link_to (image_tag railscast['image']), railscast['url'] %></td>
+
+        </tr>
+      <% end %>
+    </table>
+  </section>    
+
+</div>
+<div style='float:left;margin:1em auto;' class='span3'>
+  <section>
+    <h2>2) Railscasts 26-50</h2>
+    <table class='table table-striped'>
+      <% @railscasts[25..49].each_with_index do |railscast, i| %> 
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= link_to railscast['title'], railscast['url'] %></td>
+          <td><%= link_to (image_tag railscast['image']), railscast['url'] %></td>
+
+        </tr>
+      <% end %>
+    </table>
+  </section>    
+
+</div>
+
+<div style='float:left;margin:1em auto;' class='span3'>
+
+
+  <section>
+    <h2>3) Railscasts 51-75</h2>
+    <table class='table table-striped'>
+      <% @railscasts[50..74].each_with_index do |railscast, i| %> 
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= link_to railscast['title'], railscast['url'] %></td>
+          <td><%= link_to (image_tag railscast['image']), railscast['url'] %></td>
+
+        </tr>
+      <% end %>
+    </table>
+  </section>    
+
+</div>
+
+<div style='float:left;margin:1em auto;' class='span3'>
+
+
+  <section>
+    <h2>4) Railscasts 76-100</h2>
+    <table class='table table-striped'>
+      <% @railscasts[75..99].each_with_index do |railscast, i| %> 
+        <tr>
+          <td><%= i + 1 %></td>
+          <td><%= link_to railscast['title'], railscast['url'] %></td>
+          <td><%= link_to (image_tag railscast['image']), railscast['url'] %></td>
+
+        </tr>
+      <% end %>
+    </table>
+  </section>    
+
+</div>
+
+<div style='width:100%;display:block;clear:both'></div>

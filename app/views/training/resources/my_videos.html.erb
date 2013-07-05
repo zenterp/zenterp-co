@@ -1,0 +1,26 @@
+<%= render partial: 'training/resources/navigation' %>
+
+<div id='masonryContainer' width='100%;margin-top:-2em'>
+<% @videos.each do |video| %>
+  <% min_height = 350 - Random.rand(100) %>
+
+  <div class='item' style="border:1px solid #ccc;background-color:#fff;width:200px;padding:2em;min-height:<%= min_height %>px">
+    <p><%= video.title %></p>
+
+    <% if video.try(:image_path).present? %>
+      <%= image_tag video.try(:image_path) %>
+    <% end %>
+    <p><%= video.description %></p>
+
+  </div>
+
+<% end %>
+
+</div>
+
+<script>
+  $(function(){
+    var el = document.getElementById('masonryContainer');
+    new Masonry(el, { itemSelector: '.item' , itemWidth: '200px' });
+  })
+</script>
