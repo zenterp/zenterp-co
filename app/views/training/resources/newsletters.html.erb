@@ -49,6 +49,21 @@
       <div style='width:100%;display:block;clear:both'></div>
     </div>
 
+    <ul style='list-style:none; margin-left:0px'>
+      <% @javascript_weekly_newsletters.each do |archive, links| %>
+        <li style='padding:1em;border:1px solid #ccc'>
+          <span style='float:right'>
+            <%= links['links'].count %> links
+          </span>
+          <%= link_to "##{archive}", archive['url'], style: 'font-color:red;font-size:200%' %><br/>
+
+          <% links['links'].each do |link| %>
+            <%= link_to link['text'], link['link'] %> | 
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
   </section>
 
 </div>

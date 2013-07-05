@@ -24,7 +24,7 @@ class Training::ResourcesController < ApplicationController
   def newsletters
     @title = 'Training Resources - Weekly Newsletters'
     @html5_weekly_newsletters = []
-    @javascript_weekly_newsletters = []
+    @javascript_weekly_newsletters = JavascriptWeekly.all
     @ruby_weekly_newsletters = RubyWeekly.all
 
     @status_code_newsletters = []
