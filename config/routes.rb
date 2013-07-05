@@ -16,6 +16,8 @@ Zenterp::Application.routes.draw do
 
   get 'training/resources/railscasts', to: 'training/resources#railscasts'
   get 'training/resources/stevenzeiler/videos',    to: 'training/resources#my_videos'
+  get 'training/resources/shows',    to: 'training/resources#shows'
+  get 'training/resources/newsletters',    to: 'training/resources#newsletters'
 
   get 'training', to: 'training/resources#my_videos'
   get 'resources', to: 'training/resources#my_videos'
