@@ -5,20 +5,36 @@
 
 
 <div style='text-align:center;width:100%;display:block;clear:both;'>
-  <ul style='padding-left:1em;text-align:center;list-style:none; margin-left:auto;margi-right:auto;clear:both; display:block'>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/railscasts'>Railscasts</a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/peepcode'>Peepcode Screencasts</a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/code-school'>Code School</a></li>
+  <ul id='trainingNavigation' style='padding-left:1em;text-align:center;list-style:none; margin-left:auto;margi-right:auto;clear:both; display:block'>
+    <li style='float:left; padding-left:2em'><a href='/training/railscasts'>Railscasts</a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/peepcode'>Peepcode Screencasts</a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/codeschool'>Code School</a></li>
 
-    <li style='float:left; padding-left:2em'><a href='/training/resources/stevenzeiler/videos'><b class='current'>My Youtube Videos</b></a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/stevenzeiler/books'><b>Programming Books & Reviews</b></a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/stevenzeiler/blog'><b>My Dev Blog</b></a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/newsletters'>Weekly Newsletters</a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/shows'>Shows & Podcasts</a></li>
-    <li style='float:left; padding-left:2em'><a href='/training/resources/css-tricks'>CSS Tricks</a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/videos'><b>My Youtube Videos</b></a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/books'>Programming Books & Reviews</b></a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/blog'><b>My Dev Blog</b></a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/newsletters'>Weekly Newsletters</a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/shows'>Shows & Podcasts</a></li>
+    <li style='float:left; padding-left:2em'><a href='/training/css-tricks'>CSS Tricks</a></li>
 
   </ul>
   <br/>
 
 <hr/>
 </div>
+
+<script>
+  $(function(){
+    var currentUrl = document.location.pathname;
+    console.log(currentUrl);
+    $.each($('#trainingNavigation a'), function(i, a){
+      if ($(a).attr('href') == currentUrl) {
+
+        $(a).addClass('current');        
+      } else { 
+        console.log($(a).attr('href'));
+      }
+    })
+  })
+  
+</script>

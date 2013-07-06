@@ -1,0 +1,39 @@
+<%= render 'training/resources/navigation' %>
+
+<div class='span12' style='width:100%;'>
+  <div class='span6'>
+    <h2 style='text-align:center;border-bottom:1px solid orange;'>Programming Books I've Read</h2>
+    <% @programming_books_read.each do |book| %>
+      <section class='book' data-url='<%= book["canonicalVolumeLink"] %>' style='width:100%; padding:0.5em;margin:2em 0em'>
+          <%= image_tag book['imageLinks'].try(:[], 'thumbnail'), style: 'float:right;margin-left:0.5em' %>
+
+          <h1 style='padding:1em'><%= book['title'] %></h1>
+          <p style='padding:1em'><%= book['description'] %></p>
+      </section>
+    <% end %>
+  </div>
+
+  <div class='span6'>
+    <h2 style='text-align:center;border-bottom:1px solid purple;'>Programming Books I Want to Read</h2>
+
+    <% @programming_books_to_read.each do |book| %>
+      <section class='book' data-url='<%= book["canonicalVolumeLink"] %>' style='width:100%; padding:0.5em;margin:2em 0em'>
+        <%= image_tag book['imageLinks']['thumbnail'],style: 'float:right;margin-left:0.5em' %>
+
+          <h1><%= book['title'] %></h1>
+          <p style='padding:1em'><%= book['description'] %></p>
+      </section>
+    <% end %>
+  </div>
+</div>
+
+<script> 
+  $(function(){
+    $('section').on('click', function(e){
+        var url = $(e.target).closest('section').data().url;
+        if (typeof url != null) { 
+          window.open(url);
+        }        
+    })
+  })
+</script>

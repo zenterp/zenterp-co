@@ -1,15 +1,16 @@
 class Training::ResourcesController < ApplicationController
   def railscasts
     @title = 'Training Resources - Railcasts'
-    @railscasts = Railscast.top_100 # network
+    @railscasts = Railscast.top_100
   end 
 
   def my_videos
     @title = 'Training Resources - My Programming Tutorials'
-    @videos = YoutubeVideo.all # database
+    @videos = YoutubeVideo.all
   end 
 
   def peepcode
+    @title = 'Training Resources - Peepcode Screencasts'
     @peepcode_screencasts = Peepcode.all
   end 
 
@@ -23,14 +24,9 @@ class Training::ResourcesController < ApplicationController
 
   def newsletters
     @title = 'Training Resources - Weekly Newsletters'
-    # This currently makes three network calls!
-    @html5_weekly_newsletters = HTML5Weekly.all # network
-    @javascript_weekly_newsletters = JavascriptWeekly.all # network
-    @ruby_weekly_newsletters = RubyWeekly.all # network
-
-    @status_code_newsletters = []
-    @postgresql_weekly_newsletters = []
-    @devops_weekly_newsletters = []
+    @html5_weekly_newsletters = HTML5Weekly.all
+    @javascript_weekly_newsletters = JavascriptWeekly.all
+    @ruby_weekly_newsletters = RubyWeekly.all
   end 
 
   def css_tricks
@@ -47,4 +43,10 @@ class Training::ResourcesController < ApplicationController
     client = Tumblr::Client.new
     @posts = client.posts('stevenzeiler.tumblr.com', limit: 100)
   end 
+
+  def books
+    @title = 'Training Resources - Programming & Tech Books'
+    @programming_books_read = GoogleBook.union('programming', 'have_read')
+    @programming_books_to_read = GoogleBook.union('programming', 'to_read')
+  end    
 end 
