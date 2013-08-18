@@ -1,0 +1,47 @@
+
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="btn-group filter-category">
+				<a class="btn btn-success" href="#"><i class="icon-list icon-white"></i> Select category</a>
+				<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+				<ul class="dropdown-menu filter">
+					<li class="all active"><a href="#"><i class="icon-picture"></i> All category</a></li>
+					<li class="web"><a href="#ruby"><i class="icon-picture"></i> Rails</a></li>
+					<li class="brand"><a href="#javascript"><i class="icon-picture"></i> Javascript </a></li>
+					<li class="graphic"><a href="#html"><i class="icon-picture"></i> HTML</a></li>
+					<li class="photo"><a href="#http"><i class="icon-picture"></i> HTTP</a></li>
+					<li class="ilustrator"><a href="#ios"><i class="icon-picture"></i> iOS</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<ul class="portfolio-area da-thumbs">
+			<% @youtube_videos.each do |video| %>
+				<li style='height:340px' class="portfolio-item2" data-id="id-0" data-type="web">
+				<div class="span3">
+					<div class="thumbnail">
+						<div class="image-wrapp">
+							<img src="<%= video.image_path %>" alt="Portfolio name" title="" />
+							<article class="da-animate da-slideFromRight" style="display: block;">
+							<a class="link_post" href="portfolio-detail.html"><img src="	assets/img/icons/link_post_icon.png" alt="" /></a>
+							<span><a class="zoom" data-pretty="prettyPhoto" href="	assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt	="" title="Portfolio name" /></a></span>
+							</article>
+						</div>
+						<div class="caption">
+							<h4><a href="#"><%= video.title %></a></h4>
+							<p>
+								Tota laboramus adversarium at sed, clita persius qui et, vis quot cibo 	deterruisset id. An fuisset eleifend eos, agam dicat an ius.
+							</p>
+						</div>
+					</div>
+				</div>
+				</li>
+			<% end %>		
+		</ul>
+	</div>
+</div>
+</section>
