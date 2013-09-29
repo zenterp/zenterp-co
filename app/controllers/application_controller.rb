@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  def index 
+  def index
   	@videos = videos.find().to_a
   end
 
@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
     })
     render template: 'application/index'
   end
+
+private 
 
   def videos
     @mongo_videos_collection ||= MONGO.collection('videos')

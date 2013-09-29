@@ -5,9 +5,6 @@
 		<div class="row">
 			<div class="span8">
 				<h3><i class="m-icon-big-swapright m-icon-white"></i> <%= @video['youtube_title'] %></h3>
-				<p>
-					Disputationi comprehensam nam ut eam id accusata explicari minim splendide duo ea dicant.
-				</p>
 			</div>
 			<div class="span4">
 				<div class="input-append">
@@ -30,17 +27,6 @@
 				<iframe width="100%" height="450px" style='margin-bottom:20px;' src="//www.youtube.com/embed/<%= @video['youtube_id'] %>" frameborder="0" allowfullscreen></iframe>
 			<div class="clearfix">
 			</div>
-			<p>
-				 Ei eos suavitate forensibus mnesarchum. Eu est timeam vocibus, an nostro aliquam adipiscing quo. Zril equidem et quo, ad albucius scripserit sit. Vis constituto deseruisse an, interesset reprehendunt et mel, gloriatur concludaturque pro no. At ludus mediocritatem qui, no vituperata assueverit accommodare his. Eos simul tritani gubergren et, te vel ullum commodo docendi, ne sea regione laoreet iracundia. His menandri quaestio ea. Ea congue volutpat has, cu vim delenit offendit ullamcorper ius at agam.
-			</p>
-			<blockquote>
-				<p>
-					 Eos simul tritani gubergren et, te vel ullum commodo docendi, ne sea regione laoreet iracundia. His menandri quaestio ea. Ea congue volutpat has, cu vim delenit offendit ullamcorper. Ius at agam malorum suscipiantur, sit aliquid percipitur ei.
-				</p>
-			</blockquote>
-			<p>
-				 Justo reprehendunt mea at, cu error consul voluptaria usu. Ex vix mucius sadipscing, ea pri timeam delicatissimi, officiis theophrastus sed eu. Et quo copiosae appetere, ad explicari euripidis adversarium pri, invenire eleifend his id. Sed simul vocent appellantur ne, an nam unum commune convenire. Sea an principes dignissim intellegam. Vide duis comprehensam at sit, expetenda deseruisse ea qui. Ei eum similique dissentiet. Agam eloquentiam accommodare ei per, alia graecis consetetur id sit. Ius dicant nonumy ad, modus postea indoctum et mei. Vel legimus percipit te, vidit dicta eam ea. Vidit audire id has, usu ei vero commune. Nam duis adipisci gloriatur eu, te delicata complectitur ius, his ex clita voluptua delicata. At vel malis facilisi signiferumque, mei meis consectetuer ex, vis porro accumsan eu.
-			</p>
 			</article>
 			<!-- end article full post -->
 			<h4>Comments</h4>
@@ -49,7 +35,7 @@
 			<script type="text/javascript">
 			    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 			    var disqus_shortname = 'zenterp'; // required: replace example with your forum shortname
-			    var disqus_identifier = "<%= @video['url_stub'] %>";
+			    var disqus_identifier = "<%= @video['_id'] %>";
 
 			    /* * * DON'T EDIT BELOW THIS LINE * * */
 			    (function() {
@@ -72,7 +58,7 @@
 
 				<img style='width:50%;float:left' src="/bitcoin_accepted_here.png" class="alignleft" alt="" />
 				<div class='clearfix'></div>
-				<p>bitcoins: 13YyFhXWuw4Ug2dVL8hckxEoESjC8PPmuG</p>
+				<p>bitcoin:13YyFhXWuw4Ug2dVL8hckxEoESjC8PPmuG</p>
 
 
 				<p style='float:left'>
@@ -102,58 +88,22 @@
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade in active" id="recent">
 						<ul class="recent">
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img1.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Adhuc disputando</a></h6>
-							<p>
-								 At vero eos et accusam et justo duo dolores et eabum.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img2.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Duo te enim solum</a></h6>
-							<p>
-								 Ei viris latine ullamcorper sed vim ex omnes.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img3.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Choro scriptorem</a></h6>
-							<p>
-								 Fugit choro scriptorem eam at, nusquam consetetur ex.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
+							<% @latest.each do |video| %>
+							  <li>
+							    <a href="/training/videos/<%= video['url_stub'] %>"><img style='width:50px; float:left;'src="<%= video['thumbnail_url'] %>" alt="" /></a>
+							    <h6><a href="/training/videos/<%= video['url_stub'] %>"><%= video['youtube_title'] %></a></h6>
+							  </li>
+							<% end %>
 						</ul>
 					</div>
 					<div class="tab-pane fade" id="popular">
 						<ul class="recent">
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img3.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Choro scriptorem</a></h6>
-							<p>
-								 Fugit choro scriptorem eam at, nusquam consetetur ex.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img1.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Adhuc disputando</a></h6>
-							<p>
-								 At vero eos et accusam et justo duo dolores et eabum.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
-							<li>
-							<a href="#"><img src="assets/img/dummies/80x80/img2.jpg" class="alignleft" alt="" /></a>
-							<h6><a href="#">Duo te enim solum</a></h6>
-							<p>
-								 Ei viris latine ullamcorper sed vim ex omnes.
-							</p>
-							<a href="#">Read more..</a>
-							</li>
+							<% @popular.each do |video| %>
+							  <li>
+							    <a href="/training/videos/<%= video['url_stub'] %>"><img style='width:50px; float:left;'src="<%= video['thumbnail_url'] %>" alt="" /></a>
+							    <h6><a href="/training/videos/<%= video['url_stub'] %>"><%= video['youtube_title'] %></a></h6>
+							  </li>
+							<% end %>
 						</ul>
 					</div>
 				</div>
