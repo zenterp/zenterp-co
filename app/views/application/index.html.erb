@@ -1,4 +1,4 @@
-<section id="subintro" style='background:#00a0f0'>
+<section id="subintro" style='background:#8A76d5'>
 <div class="jumbotron subhead" id="overview">
   <div class="container">
     <div class="row">
@@ -32,6 +32,12 @@
 				scrollTop: $(document).height() 
 			}, 1000);
 		})
+
+    $('form').on('submit', function (e) {
+      e.preventDefault();
+      var query = $('form .search-query').val();
+      document.location.href = '/training/videos/search/'+query;
+    })
 		
 	})
 </script>

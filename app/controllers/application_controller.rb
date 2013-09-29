@@ -1,7 +1,21 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+
   def index 
-  	@videos = MONGO.collection('videos').find().to_a
+  	@videos = videos.find().to_a
+  end
+
+  def search
+    @videos = videos.find({
+      "youtube_title" => {
+        "$regex" => "#{params[:query]}",
+        "$options" => "i"
+      }
+    })
+    render template: 'application/index'
+  end
+
+  def videos
+    @mongo_videos_collection ||= MONGO.collection('videos')
   end
 end
