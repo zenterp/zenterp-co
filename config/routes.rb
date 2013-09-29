@@ -2,7 +2,7 @@ Zenterp::Application.routes.draw do
   devise_for :users
   devise_for :admins
 
-  root to: 'application#index'
+  root to: redirect('/training/videos')
   get 'contact' => 'application#contact'
   get 'team', to: 'team#index'
 
@@ -17,7 +17,7 @@ Zenterp::Application.routes.draw do
   get 'admin/videos', to: 'admin/videos#index'
 
   get 'training/railscasts', to: 'training/resources#railscasts'
-  get 'training/videos',    to: 'training/resources#my_videos'
+  get 'training/videos',    to: 'application#index'
   get 'training/shows',    to: 'training/resources#shows'
   get 'training/newsletters',    to: 'training/resources#newsletters'
   get 'training//blog',    to: 'training/resources#my_blog'
