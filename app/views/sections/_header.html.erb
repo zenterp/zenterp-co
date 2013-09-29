@@ -3,24 +3,28 @@
 ================================================== -->
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<div class="container">
-			<!-- logo -->
+		<div class="container" style='margin: 0 auto 8px auto'>
 			<a class="brand logo" href="/">
 			<img src="/assets/img/logo.png" alt="" />
+
+			Technology Training
 			</a>
-			<!-- end logo -->
-			<!-- top menu -->
 
 			<div style='float:right'>
+				<div class="btn-group filter-category" style='margin-top:20px;'>
+					<a class="btn btn-success" href="#"><i class="icon-list icon-white"></i> Select category</a>
+					<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+					<ul class="dropdown-menu filter">
+						<li class="all active"><a href="#"><i class="icon-picture"></i> All category</a></li>
+						<li class="web"><a href="#ruby"><i class="icon-picture"></i> Rails</a></li>
+						<li class="brand"><a href="#javascript"><i class="icon-picture"></i> Javascript </a></li>
+						<li class="graphic"><a href="#html"><i class="icon-picture"></i> HTML</a></li>
+						<li class="photo"><a href="#http"><i class="icon-picture"></i> HTTP</a></li>
+						<li class="ilustrator"><a href="#ios"><i class="icon-picture"></i> iOS</a></li>
+					</ul>
+				</div>
 				<nav>
 				<ul class="nav topnav">
-					<li class="dropdown success">
-					<a href="/"><i class="icon-home icon-white"></i> Home</a>
-					</li>
-					<li class="dropdown info">
-					<a href="/training"><i class="icon-bullhorn icon-white"></i>Training</a>
-					</li>
-
 					<% if current_user.present? && current_user.admin? %>
 					<li class="dropdown primary">
 					<a href="/console"><i class="icon-leaf icon-white"></i> Admin Mode</a>
@@ -29,7 +33,6 @@
 				</ul>
 				</nav>
 			</div>
-			<h1 style='float:right;padding:0.5em 2em 0 0'>questions? email me@stevenzeiler.com</h1>
 
 			<!-- end menu -->
 		</div>

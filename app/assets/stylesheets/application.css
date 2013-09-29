@@ -24,3 +24,17 @@
 section.book { 
   border: 2px;
 }
+
+#videosGrid {
+  margin-top:35px;
+}
+
+.container {
+  padding:0 0 10px 0;
+}
+
+@media (max-width: 980px){
+  #videosGrid {
+    margin-top:-65px;
+  }
+} 

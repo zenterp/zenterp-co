@@ -5,7 +5,5 @@ class VideosController < ApplicationController
   end 
 
   def show
-    @video = YoutubeVideo.find(params[:id]) 
-    render "videos/video", layout: false
   end   
 end 
