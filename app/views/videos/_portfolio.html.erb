@@ -2,18 +2,23 @@
 <div class="container">
 	<div class="row">
 		<ul class="portfolio-area da-thumbs">
-			<% @youtube_videos.each do |video| %>
+			<% @videos.each do |video| %>
 				<li style='height:340px' class="portfolio-item2" data-id="id-0" data-type="web">
 				<div class="span3">
 					<div class="thumbnail">
 						<div class="image-wrapp">
-							<a href="videos/52"><img src="<%= video.image_path %>" alt="Portfolio name" title="" style='height:203px'/></a>
+							<a href="/training/videos/<%= video['url_stub'] %>">
+								<img src"" 
+										 title="<%= video['youtube_title'] %>" 
+										 style='height:203px'/>
+							</a>
 						</div>
 						<div class="caption">
-							<h4><a href="videos/52"><%= video.title %></a></h4>
-							<p style='overflow-y:scroll'>
-								Tota laboramus adversarium at sed, clita persius qui et, vis quot cibo 	deterruisset.
-							</p>
+							<h4>
+								<a href="/training/videos/<%= video['url_stub'] %>">
+									<%= video['youtube_title'] %>
+								</a>
+							</h4>
 						</div>
 					</div>
 				</div>
