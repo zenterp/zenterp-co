@@ -31,13 +31,6 @@
 			$("html, body").animate({ 
 				scrollTop: $(document).height() 
 			}, 1000);
-		})
-
-    $('form').on('submit', function (e) {
-      e.preventDefault();
-      var query = $('form .search-query').val();
-      document.location.href = '/training/videos/search/'+query;
-    })
-		
+		})		
 	})
 </script>
