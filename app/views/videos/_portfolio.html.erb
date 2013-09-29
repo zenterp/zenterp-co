@@ -1,12 +1,5 @@
 
 <div class="container">
-	<div class="row-fluid">
-		<div class="span12">
-
-		</div>
-	</div>
-
-
 	<div class="row">
 		<ul class="portfolio-area da-thumbs">
 			<% @youtube_videos.each do |video| %>
@@ -14,16 +7,12 @@
 				<div class="span3">
 					<div class="thumbnail">
 						<div class="image-wrapp">
-							<img src="<%= video.image_path %>" alt="Portfolio name" title="" />
-							<article class="da-animate da-slideFromRight" style="display: block;">
-							<a class="link_post" href="portfolio-detail.html"><img src="	assets/img/icons/link_post_icon.png" alt="" /></a>
-							<span><a class="zoom" data-pretty="prettyPhoto" href="	assets/img/dummies/big1.jpg"><img src="assets/img/icons/zoom_icon.png" alt	="" title="Portfolio name" /></a></span>
-							</article>
+							<a href="videos/52"><img src="<%= video.image_path %>" alt="Portfolio name" title="" style='height:203px'/></a>
 						</div>
 						<div class="caption">
-							<h4><a href="#"><%= video.title %></a></h4>
-							<p>
-								Tota laboramus adversarium at sed, clita persius qui et, vis quot cibo 	deterruisset id. An fuisset eleifend eos, agam dicat an ius.
+							<h4><a href="videos/52"><%= video.title %></a></h4>
+							<p style='overflow-y:scroll'>
+								Tota laboramus adversarium at sed, clita persius qui et, vis quot cibo 	deterruisset.
 							</p>
 						</div>
 					</div>

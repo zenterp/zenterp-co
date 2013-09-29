@@ -26,7 +26,7 @@ section.book {
 }
 
 #videosGrid {
-  margin-top:35px;
+  margin-top:65px;
 }
 
 .container {
@@ -35,6 +35,6 @@ section.book {
 
 @media (max-width: 980px){
   #videosGrid {
-    margin-top:-65px;
+    margin-top:-35px;
   }
 } 
