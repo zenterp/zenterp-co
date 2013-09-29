@@ -33,6 +33,7 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.2.1.1)
       sass (~> 3.2)
+    bson (1.9.2)
     builder (3.0.4)
     cancan (1.6.10)
     coderay (1.0.9)
@@ -86,6 +87,8 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.21)
+    mongo (1.9.2)
+      bson (~> 1.9.2)
     multi_json (1.7.0)
     multi_xml (0.5.4)
     multipart-post (1.2.0)
@@ -223,6 +226,7 @@ DEPENDENCIES
   devise
   httparty
   jquery-rails
+  mongo
   omniauth
   omniauth-coinbase
   omniauth-facebook

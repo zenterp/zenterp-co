@@ -8,6 +8,7 @@ Zenterp::Application.routes.draw do
 
   resources :research, only: :index
   resources :videos, only: [:index, :show]
+  get 'training/videos/:slug', to: 'videos#show'
 
   mount RailsAdmin::Engine => '/console', as: 'admin'
 

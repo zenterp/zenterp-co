@@ -16,6 +16,7 @@ gem 'rspec-rails'
 gem 'cancan'
 gem 'httparty'
 gem 'tumblr_client'
+gem 'mongo'
 
 group :development do 
   gem 'pry'

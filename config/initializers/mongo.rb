@@ -1,0 +1,1 @@
+MONGO =  Mongo::MongoClient.from_uri("mongodb://stevenzeiler:#{ENV['MONGOHQ_PASSWORD']}@paulo.mongohq.com:10027/zenterp").db("zenterp")
