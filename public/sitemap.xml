@@ -7,195 +7,123 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.zenterp.co/</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/training</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/team</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/research</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/contact</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/training/railscasts</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/training/peepcode</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/training/codeschool</loc>
-</url>
-<url>
   <loc>http://www.zenterp.co/training/videos</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/training/books</loc>
+  <loc>http://www.zenterp.co/training/videos/search/rails</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/training/blog</loc>
+  <loc>http://www.zenterp.co/training/videos/search/ruby</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/training/newsletters</loc>
+  <loc>http://www.zenterp.co/training/videos/search/javascript</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/training/shows</loc>
+  <loc>http://www.zenterp.co/training/videos/search/arduino</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/training/css-tricks</loc>
+  <loc>http://www.zenterp.co/training/videos/search/ios</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/1</loc>
+  <loc>http://www.zenterp.co/training/videos/search/book</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/2</loc>
+  <loc>http://www.zenterp.co/training/videos/refactor-html-site-template-to-ruby-on-rails-part-one</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/3</loc>
+  <loc>http://www.zenterp.co/training/videos/oauth-demonstration-with-coinbase-and-omniauth-rails</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/4</loc>
+  <loc>http://www.zenterp.co/training/videos/best-beginner-ruby-book-everyday-scripting-with-ruby</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/5</loc>
+  <loc>http://www.zenterp.co/training/videos/arduino-light-sensor-to-serial-port-demo</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/6</loc>
+  <loc>http://www.zenterp.co/training/videos/web-software-architecture-a-conceptual-introduction</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/7</loc>
+  <loc>http://www.zenterp.co/training/videos/phonegap-live-demo-app-with-localstorage</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/8</loc>
+  <loc>http://www.zenterp.co/training/videos/ratchet-mobile-app-with-remote-data-live-tutorial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/9</loc>
+  <loc>http://www.zenterp.co/training/videos/rubymotion-ios-reverse-geocoding-live-tutorial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/10</loc>
+  <loc>http://www.zenterp.co/training/videos/google-drive-ruby-gem-demonstration</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/11</loc>
+  <loc>http://www.zenterp.co/training/videos/build-a-jquery-mobile-app-and-launch-on-amazon-s3</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/12</loc>
+  <loc>http://www.zenterp.co/training/videos/javascript-data-tables-search-and-sort-demo</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/13</loc>
+  <loc>http://www.zenterp.co/training/videos/wii-nunchuck-communication-to-arduino-over-serial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/14</loc>
+  <loc>http://www.zenterp.co/training/videos/deploy-your-rails-portfolio-app-to-heroku-tutorial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/15</loc>
+  <loc>http://www.zenterp.co/training/videos/live-graph-of-light-meter-over-wifi-with-arduino-and-javascript</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/16</loc>
+  <loc>http://www.zenterp.co/training/videos/heroku-assignment-1-your-first-app-in-the-cloud</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/17</loc>
+  <loc>http://www.zenterp.co/training/videos/rubymotion-ios-map-app-live-coding</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/18</loc>
+  <loc>http://www.zenterp.co/training/videos/building-high-performance-websites-book-review</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/19</loc>
+  <loc>http://www.zenterp.co/training/videos/build-your-dream-job-invest-in-your-mind</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/20</loc>
+  <loc>http://www.zenterp.co/training/videos/first-step-to-your-dream-job-codeschool</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/21</loc>
+  <loc>http://www.zenterp.co/training/videos/backbone-javascript-app-with-rails-live-tutorial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/22</loc>
+  <loc>http://www.zenterp.co/training/videos/simplest-possible-website-deploy-nitrous-io</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/23</loc>
+  <loc>http://www.zenterp.co/training/videos/google-maps-geocoding-by-address-javascript-tutorial</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.zenterp.co/videos/24</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/25</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/26</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/27</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/28</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/29</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/30</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/31</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/32</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/33</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/34</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/35</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/36</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/37</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/38</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/39</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/40</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/41</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/42</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/43</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/44</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/45</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/46</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/47</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/48</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/49</loc>
-</url>
-<url>
-  <loc>http://www.zenterp.co/videos/50</loc>
+  <loc>http://www.zenterp.co/training/videos/intro-to-google-maps-javascript-api-tutorial-building-basic-map-app</loc>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>
